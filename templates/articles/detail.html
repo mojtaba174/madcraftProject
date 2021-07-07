@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}صفحه اصلی{% endblock %}
+
+{% block body %}
+
+    <img src="/media/{{ article.thumbnail }}" alt="عکس لود نشد" id="thumbnail">
+    <h2>{{ article.title }}</h2>
+    <p>Writing by : {{ article.author }}</p>
+    <p>{{ article.date }}</p>
+    <p>{{ article.body }}</p>
+
+
+{% endblock %}

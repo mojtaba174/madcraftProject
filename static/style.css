@@ -27,3 +27,9 @@ ul.horizontal li a{
     text-decoration: none;
     float: left;
 }
+ul.horizontal li a:hover:not(.active){
+    background-color: black;
+}
+ul.horizontal li a.active{
+    background-color:#04AA6D ;
+}

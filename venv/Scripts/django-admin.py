@@ -1,4 +1,4 @@
-#!C:\Users\Mojtaba\PycharmProjects\madcraftProject\venv\Scripts\python.exe
+#!F:\prije\madcraftProject\venv\Scripts\python.exe
 # When the django-admin.py deprecation ends, remove this script.
 import warnings
 

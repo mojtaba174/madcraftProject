@@ -5,13 +5,13 @@
 
 {% block body %}
 
-    <h1>صفحه اصلی</h1>
-
-    {% for article in articles %}
-    <div class="article">
-    <img src="/media/{{ article.thumbnail }}" alt="عکس لود نشد" class="article_image">
-    <h3><a href="articles/{{ article.slug }}">{{ article.title }}</a></h3>
-    <p>{{ article.description }}</p>
-    </div>
-    {% endfor %}
+{#    <h1>صفحه اصلی</h1>#}
+{##}
+{#    {% for article in articles %}#}
+{#    <div class="article">#}
+{#    <img src="/media/{{ article.thumbnail }}" alt="عکس لود نشد" class="article_image">#}
+{#    <h3><a href="articles/{{ article.slug }}">{{ article.title }}</a></h3>#}
+{#    <p>{{ article.description }}</p>#}
+{#    </div>#}
+{#    {% endfor %}#}
 {% endblock %}

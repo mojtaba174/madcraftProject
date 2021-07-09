@@ -21,11 +21,9 @@ ul.horizontal{
 }
 ul.horizontal li a{
     padding: 14px 16px;
-    display: inline-block;
+    display: inline;
     color: white;
     text-align: center  ;
     text-decoration: none;
-}
-ul{
-    display: block;
+    float: left;
 }

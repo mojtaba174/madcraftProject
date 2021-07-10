@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}Articles{% endblock %}
+
+{% block body %}
+
+    {% for article in articles %}
+    <div class="article">
+    <img src="/media/{{ article.thumbnail }}" alt="عکس لود نشد" class="article_image">
+    <h3><a href="{{ article.slug }}">{{ article.title }}</a></h3>
+    <p>{{ article.description }}</p>
+    </div>
+    {% endfor %}
+
+{% endblock %}

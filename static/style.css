@@ -75,6 +75,7 @@ input,button{
     /*border-radius: 50px;*/
 }
 button{
+    /*position: relative;*/
     z-index: 1;
     left: -19%;
     top: 110px;
@@ -85,11 +86,15 @@ button{
     background: #7fcc96;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #7fcc96, #90d7ef);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #7fcc96, #90d7ef);
-    transition: background 0.5s linear;
+    transition: background 2s linear;
 }
-button:hover {
+button:hover{
+    /*transition: background 3s linear;*/
+    cursor: pointer;
+    content: "";
+    z-index: -1;
+    background: linear-gradient(to left, #7fcc96, #90d7ef);
 
-    background: linear-gradient(to right, #90d7ef,#7fcc96);
 }
 @font-face {
    font-family: myFirstFont;

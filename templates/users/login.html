@@ -4,14 +4,20 @@
 {% block title %}login{% endblock %}
 
 {% block body %}
-    <div id="login-box">
-        <form action="{% url 'users:login'%}" class='form_log&sing' method="post">
-        {% csrf_token %}
-        {{ form }}
-        <button type="submit">login</button>
-        </form>
+    <div id="parent-login-box">
+        <div id="login-box">
+            <d1 id="login">login</d1>
+            <form action="{% url 'users:login'%}" class="form_log&sing" method="post" style="
+                text-align: center;
+                top: 50%;
+                position: relative;
+                transform: translateY(-50%);>
+            {% csrf_token %}
+            {{ form }}
+            <button type="submit" >login</button>
+            </form>
+        </div>
     </div>
-
 
 {% endblock %}
  </div>

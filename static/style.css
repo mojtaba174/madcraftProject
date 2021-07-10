@@ -31,5 +31,21 @@ ul.horizontal li a:hover:not(.active){
     background-color: black;
 }
 ul.horizontal li a.active{
-    background-color:#04AA6D ;
+    background-color:#04AA6D;
+}
+#background-login{
+    width: 100%;
+    height: 100%;
+    background: #348F50;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #56B4D3, #348F50);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #56B4D3, #348F50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+#login-box{
+    background-color: azure;
+    text-align: center;
+    width: 200px;
+    height: 400px;
+    margin:0;
+    /*display:;*/
 }

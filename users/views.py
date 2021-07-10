@@ -37,3 +37,10 @@ def logout_view(request):
         return redirect('home')
     else:
         return redirect('home')
+
+def logout_view(request):
+    if request.method == "POST":
+        logout(request)
+        return redirect('home')
+    else:
+        return redirect('home')

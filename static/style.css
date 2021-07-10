@@ -63,12 +63,12 @@ ul.horizontal li a.active{
     top: 56px;
     transform: translateX(50%);
 
-
+}
 input,button{
     outline: none;
     box-shadow: none;
     /*border: black;*/
-    border-style:solid black;
+    border-style:solid;
     border-left: none;
     border-right: none;
     border-top: none;

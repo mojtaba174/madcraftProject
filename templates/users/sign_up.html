@@ -4,7 +4,7 @@
 
 {% block body %}
 
-    <form action="{% url 'users:signup' %}" method="post" class="form_log&sing">
+    <form action="{% url 'users:signup' %}" method="post" class="form_logandsing">
     {% csrf_token %}
     {{ form }}
     <button type="submit">ثبت نام</button>

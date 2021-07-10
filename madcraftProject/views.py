@@ -5,3 +5,7 @@ from articles import models
 def Home(request):
     articles = models.Article.objects.all().order_by('-date')
     return render(request, "home.html", {'articles': articles})
+
+
+def About(request):
+    return render(request, "about.html")

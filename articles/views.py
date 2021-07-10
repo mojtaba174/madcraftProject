@@ -3,6 +3,7 @@ from . import forms
 from django.contrib.auth.decorators import login_required
 from . import models
 
+
 @login_required(login_url="/users/login")
 def CreateArticle(request):
     if request.method == "POST":
@@ -20,3 +21,8 @@ def CreateArticle(request):
 def DetailArticle(request, slug):
     article = models.Article.objects.get(slug=slug)
     return render(request, 'articles/detail.html', {"article":article})
+
+
+def ArticleList(request):
+    articles = models.Article.objects.all().order_by('-date')
+    return render(request, 'articles/list.html', {"articles":articles})

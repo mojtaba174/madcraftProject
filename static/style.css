@@ -75,6 +75,8 @@ input,button{
     /*border-radius: 50px;*/
 }
 button{
+    z-index: 1;
+    left: -19%;
     top: 110px;
     border: none;
     width: 250px;
@@ -83,4 +85,16 @@ button{
     background: #7fcc96;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #7fcc96, #90d7ef);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #7fcc96, #90d7ef);
+    transition: background 0.5s linear;
+}
+button:hover {
+
+    background: linear-gradient(to right, #90d7ef,#7fcc96);
+}
+@font-face {
+   font-family: myFirstFont;
+   src: url(Rubik-SemiBold.ttf);
+}
+*{
+     font-family: myFirstFont;
 }

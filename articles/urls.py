@@ -5,5 +5,7 @@ from . import views
 app_name = "articles"
 urlpatterns = [
     path("create/", views.CreateArticle, name="create"),
-    path('<slug>', views.DetailArticle, name="detail")
+    path("", views.ArticleList, name="list"),
+    path('<slug>', views.DetailArticle, name="detail"),
+
 ]

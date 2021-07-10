@@ -15,16 +15,13 @@
 <div id="menus">
     <ul class="horizontal">
       <li>
-          <a class="active" href="http://127.0.0.1:8000/">Home</a>
+          <a class="active" href="{% url 'home' %}">Home</a>
       </li>
       <li>
-          <a href="#news">News</a>
+          <a href="{% url 'articles:list' %}">Article</a>
       </li>
       <li>
-          <a href="#contact">Contact</a>
-      </li>
-      <li>
-          <a href="#about">About</a>
+          <a href="{% url 'about' %}">About</a>
       </li>
     </ul>
 

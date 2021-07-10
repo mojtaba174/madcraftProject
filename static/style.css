@@ -19,19 +19,6 @@ ul.horizontal{
 
 
 }
-ul.horizontal a , ul.horizontal form button{
-    float:right;
-    padding: 14px 16px;
-    display: inline;
-    color: white;
-    text-align: center  ;
-    text-decoration: none;
-    background: none;
-}
-ul.horizontal a:hover , ul.horizontal form button:hover{
-    background-color: black;
-    cursor: pointer;
-}
 ul.horizontal li a{
     padding: 14px 16px;
     display: inline;
@@ -87,7 +74,7 @@ input,button{
     position: inherit;
     /*border-radius: 50px;*/
 }
-.form_logandsing button{
+button{
     z-index: 1;
     left: -19%;
     top: 110px;
@@ -100,7 +87,7 @@ input,button{
     background: linear-gradient(to right, #7fcc96, #90d7ef);
     transition: background 0.5s linear;
 }
-.form_logandsing button:hover {
+button:hover {
 
     background: linear-gradient(to right, #90d7ef,#7fcc96);
 }

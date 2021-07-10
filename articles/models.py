@@ -10,6 +10,7 @@ class Article(models.Model):
     thumbnail = models.ImageField(default="default-image.jpg", blank=True)
     author = models.ForeignKey(User, default=None, on_delete=models.CASCADE)
     description = models.CharField(max_length=150)
+    show = models.BooleanField(default=False)
 
     def __str__(self):
         return self.title

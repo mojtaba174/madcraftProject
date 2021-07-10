@@ -36,9 +36,9 @@ ul.horizontal li a.active{
 #background-login{
     width: 100%;
     height: 100%;
-    background: #348F50;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #348F50, #56B4D3);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #348F50, #56B4D3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        background: #348F50;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #348F50, #56B4D3);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #348F50, #56B4D3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 }
 #pa{
@@ -67,11 +67,20 @@ ul.horizontal li a.active{
 input,button{
     outline: none;
     box-shadow: none;
-    /*border: black;*/
-    border-style:solid;
+    border: black solid 1px;
     border-left: none;
     border-right: none;
     border-top: none;
     position: inherit;
     /*border-radius: 50px;*/
+}
+button{
+    top: 110px;
+    border: none;
+    width: 250px;
+    height: 50px;
+    border-radius: 30px;
+    background: #7fcc96;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #7fcc96, #90d7ef);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #7fcc96, #90d7ef);
 }

@@ -25,7 +25,7 @@
           <a href="{% url 'about' %}">About</a>
       </li>
       {% if user.is_authenticated %}
-          <a href="{% url 'users:dashboard' %}" id="logoIcon"><img src="/media/298756-512.png" alt="LOGO"></a>
+          <a href="{% url 'users:dashboard' %}" id="logoIcon"><img src="/media/298756-512.png" alt="DASHBOARD"></a>
        <a href="{% url 'articles:create' %}">Writing Article</a>
           <form action="{% url 'users:logout' %}" method="post" id="logout_button">
           <button type="submit">Logout</button>

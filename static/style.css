@@ -145,17 +145,10 @@ ul.horizontal li a.active{
     font-family: myFirstFont, serif;
 }
 .helptext{
-    font-size:0px;
+    font-size: 0px;
     list-style-type: none;
 }
 #sign-up{
     top: 25px;
     left: 0%;
-}
-/*.form_logandsing label , .form_logandsing input {*/
-/*    position: absolute;*/
-/*    top:50px;*/
-/*}*/
-p{
-font-size: 50px;
 }

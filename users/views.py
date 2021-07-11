@@ -31,12 +31,6 @@ def login_view(request):
     form = AuthenticationForm()
     return render(request, "users/login.html", {"form": form})
 
-def logout_view(request):
-    if request.method == "POST":
-        logout(request)
-        return redirect('home')
-    else:
-        return redirect('home')
 
 def logout_view(request):
     if request.method == "POST":
@@ -44,3 +38,15 @@ def logout_view(request):
         return redirect('home')
     else:
         return redirect('home')
+
+
+def logout_view(request):
+    if request.method == "POST":
+        logout(request)
+        return redirect('home')
+    else:
+        return redirect('home')
+
+
+def dashboard_view(request):
+    return render(request, 'users/dashboard.html')

@@ -75,7 +75,7 @@ ul.horizontal li a.active{
     background-color: white;
     text-align: center;
     width: 500px;
-    height:500px;
+    height:570px;
     margin:0;
     border-radius:20px;
     padding: 10px;
@@ -85,7 +85,7 @@ ul.horizontal li a.active{
 #login{
     position: absolute;
     right: 50%;
-    top: 56px;
+    top: 15px;
     transform: translateX(50%);
 
 }
@@ -103,7 +103,7 @@ ul.horizontal li a.active{
     border-radius: 4px;
 }
 .form_logandsing input:focus{
-    box-shadow: 0 0 10px 2px #46e9df
+    box-shadow: 0 0 9px 1px #90d7ef;
 }
 .form_logandsing input,button{
     outline: none;

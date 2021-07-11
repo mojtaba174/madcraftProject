@@ -69,8 +69,9 @@ ul.horizontal li a.active{
     margin:0;
     border-radius:20px;
     padding: 10px;
-
+    box-shadow: 1px 5px 15px grey;
 }
+
 #login{
     position: absolute;
     right: 50%;
@@ -78,6 +79,7 @@ ul.horizontal li a.active{
     transform: translateX(50%);
 
 }
+
 .form_logandsing input{
     display: block;
     padding: 10px;
@@ -87,6 +89,11 @@ ul.horizontal li a.active{
     /*border-bottom: black;*/
     margin: 10px;
     background: #f5f5f5;
+    width: 480px;
+    border-radius: 4px;
+}
+.form_logandsing input:focus{
+    box-shadow: 0 0 10px 2px #46e9df
 }
 .form_logandsing input,button{
     outline: none;
@@ -110,7 +117,7 @@ ul.horizontal li a.active{
     background: linear-gradient(to right, #7fcc96, #90d7ef);
     transition: background 0.7s linear;
     z-index: 1;
-
+    color:white;
 }
 
     .form_logandsing button::before {

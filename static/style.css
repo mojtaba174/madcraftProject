@@ -65,7 +65,7 @@ ul.horizontal li a.active{
 
 }
 #pa{
-
+    position: relative;
 
 }
 #login-box{
@@ -75,14 +75,20 @@ ul.horizontal li a.active{
     background-color: white;
     text-align: center;
     width: 500px;
-    height:auto;
+    height:500px;
     margin:0;
     border-radius:20px;
-    padding: 20px 10px;
+    padding: 10px;
     box-shadow: 1px 5px 15px grey;
 }
 
+#login{
+    position: absolute;
+    right: 50%;
+    top: 56px;
+    transform: translateX(50%);
 
+}
 
 .form_logandsing input{
     display: block;
@@ -97,7 +103,7 @@ ul.horizontal li a.active{
     border-radius: 4px;
 }
 .form_logandsing input:focus{
-    box-shadow: 0 0 10px 4px #90d7ef;
+    box-shadow: 0 0 10px 2px #46e9df
 }
 .form_logandsing input,button{
     outline: none;
@@ -110,6 +116,7 @@ ul.horizontal li a.active{
 .form_logandsing button {
     cursor: pointer;
   position: relative;
+    left: 25%;
     top: 110px;
     border: none;
     width: 250px;
@@ -158,11 +165,7 @@ ul.horizontal li a.active{
     font-size: 0px;
     list-style-type: none;
 }
-.form_logandsing #button{
+#sign-up{
     top: 25px;
-    left: 0;
-}
-.form_logandsing #button_login{
-    top: 25px;
-    left: 25%;
+    left: 0%;
 }

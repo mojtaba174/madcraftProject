@@ -4,10 +4,12 @@
 <head>
     {% block header %}{% endblock %}
     <meta charset="UTF-8">
+    <script src="https://kit.fontawesome.com/154bbbe058.js" crossorigin="anonymous"></script>
     <title>
     {% block title %}
     {% endblock %}
     </title>
+
     <link rel="stylesheet" href="{% static 'style.css' %}">
 </head>
 <body>
@@ -16,7 +18,7 @@
 <div id="menus">
     <ul class="horizontal">
       <li>
-          <a class="active" href="{% url 'home' %}">Home</a>
+          <a class="active" href="{% url 'home' %}"><i class="fas fa-home"></i></a>
       </li>
       <li>
           <a href="{% url 'articles:list' %}">Article</a>

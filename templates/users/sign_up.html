@@ -1,14 +1,18 @@
+<div id="background-login">
 {% extends 'base.html' %}
 
-{% block title %}ثبت نام{% endblock %}
+{% block title %}SIGNUP{% endblock %}
 
 {% block body %}
-
-    <form action="{% url 'users:signup' %}" method="post" class="form_logandsing">
-    {% csrf_token %}
-    {{ form }}
-    <button type="submit">ثبت نام</button>
-</form>
-
+     <div id="parent-login-box">
+        <div id="login-box">
+            <h1 id="login">LOGIN</h1>
+                <form action="{% url 'users:signup' %}" method="post" class="form_logandsing">
+                {% csrf_token %}
+                {{ form }}
+                <button type="submit" id="sign-up">SIGNUP</button>
+                </form>
+        </div>
+    </div>
 {% endblock %}
-
+</div>

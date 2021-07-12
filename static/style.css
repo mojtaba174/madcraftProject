@@ -37,6 +37,7 @@ ul.horizontal a:hover , ul.horizontal form button:hover{
     cursor: pointer;
 }
 ul.horizontal li a{
+    height: 19px;
     padding: 14px 16px;
     display: inline;
     color: white;
@@ -140,12 +141,8 @@ ul.horizontal li a.active{
 
 .form_logandsing button:hover::before {
   opacity: 1;
+}
 
-}
-.form_logandsing button:active{
-    width: 255px;
-    height: 50px;
-}
 
 @font-face {
    font-family: myFirstFont;

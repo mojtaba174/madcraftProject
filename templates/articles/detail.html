@@ -18,7 +18,7 @@
     </form>
 
     {% for comment in comments %}
-        {% if article.id == comment.article_id %}
+        {% if article.id == comment.article_id and comment.active %}
         <p>{{ comment.name }}</p>
         <p>{{ comment.date }}</p>
         <p>{{ comment.body }}</p>

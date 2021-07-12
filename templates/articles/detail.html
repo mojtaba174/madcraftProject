@@ -11,5 +11,17 @@
     <p>{{ article.date }}</p>
     <p>{{ article.body }}</p>
 
+    <form action="" method="post" id="comment_form">
+    {{ commentForm }}
+    {% csrf_token %}
+    <button class="button">Send</button>
+    </form>
 
+    {% for comment in comments %}
+        {% if article.id == comment.article_id %}
+        <p>{{ comment.name }}</p>
+        <p>{{ comment.date }}</p>
+        <p>{{ comment.body }}</p>
+        {% endif %}
+    {% endfor %}
 {% endblock %}

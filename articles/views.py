@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, HttpResponse
+from django.shortcuts import render, redirect
 from . import forms
 from django.contrib.auth.decorators import login_required
 from . import models
@@ -20,9 +20,21 @@ def CreateArticle(request):
 
 def DetailArticle(request, slug):
     article = models.Article.objects.get(slug=slug)
-    return render(request, 'articles/detail.html', {"article":article})
+
+    commentShow = models.Comments.objects.all()
+    if request.method == "POST":
+        comment = forms.CommentForm(request.POST or None)
+        if comment.is_valid():
+            comment = comment.save(commit=False)
+            comment.article_id = article.id
+            comment.save()
+            return redirect(request.path)
+
+    comment = forms.CommentForm()
+    return render(request, 'articles/detail.html', {"article": article, "commentForm": comment, "comments": commentShow})
 
 
 def ArticleList(request):
     articles = models.Article.objects.all().order_by('-date')
     return render(request, 'articles/list.html', {"articles":articles})
+

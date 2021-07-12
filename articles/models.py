@@ -14,3 +14,18 @@ class Article(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class Comments(models.Model):
+    article = models.ForeignKey(Article, on_delete=models.CASCADE)
+    name = models.CharField(max_length=80)
+    email = models.EmailField()
+    body = models.TextField()
+    date = models.DateTimeField(auto_now_add=True)
+    active = models.BooleanField(default=False)
+
+    class Meta:
+        ordering = ['date']
+
+    def __str__(self):
+        return f'comment {self.body} by {self.name}'

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <meta charset="UTF-8">
+    <title>change email</title>
+</head>
+<body>
+
+<form method="post" class="ChangeEmailForm" action="{% url 'users:changeEmail' %}">
+    {{ changeEmailForm }}
+    {% csrf_token %}
+    <button type="submit">Change</button>
+</form>
+
+</body>
+</html>

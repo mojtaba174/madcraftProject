@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>my details</title>
+</head>
+<body>
+<label>
+    username:
+    <input type="text" value="{{ user.username }}" disabled="disabled">
+</label>
+<label>
+    email:
+    {% if user.email == "" %}
+    <input type="email" placeholder="You do not have email" disabled="disabled">
+    {% else %}
+    <input type="email" value="{{ user.email }}" disabled="disabled">
+    {% endif %}
+</label>
+
+<a href="{% url 'users:changeEmail' %}">change email</a>
+<a href="{% url 'users:changePassword' %}">change Password</a>
+
+</body>
+</html>

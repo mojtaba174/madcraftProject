@@ -1,8 +1,9 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, HttpResponse
 from django.contrib.auth.forms import UserCreationForm
-from .forms import RegisterForm
+from .forms import RegisterForm, ChangeEmail, ChangePassword
 from django.contrib.auth import login, logout
 from django.contrib.auth.forms import AuthenticationForm
+from django.contrib.auth.models import User
 
 
 def signup_view(request):
@@ -40,13 +41,39 @@ def logout_view(request):
         return redirect('home')
 
 
-def logout_view(request):
-    if request.method == "POST":
-        logout(request)
-        return redirect('home')
-    else:
-        return redirect('home')
-
-
 def dashboard_view(request):
     return render(request, 'users/dashboard.html')
+
+
+def UserDetail(request):
+
+    user = request.user
+    return render(request, "users/userDetail.html", {'user': user})
+
+
+def ChangeEmail_view(request):
+    user = User.objects.get(username=request.user.username)
+    if request.method == "POST":
+        changeEmailForm = ChangeEmail(request.POST)
+        if changeEmailForm.is_valid():
+            user.email = (changeEmailForm['email'].value())
+            user.save()
+            return redirect('users:detail')
+    changeEmailForm= ChangeEmail()
+    return render(request, 'users/changeEmail.html', {'changeEmailForm':changeEmailForm})
+
+
+def ChangePassword_view(request):
+    user = User.objects.get(username=request.user.username)
+    if request.method == "POST":
+        passwordForm = ChangePassword(request.POST)
+        if passwordForm.is_valid():
+            if user.check_password(passwordForm['oldPassword']):
+                if passwordForm['oldPassword'] != passwordForm['password1']:
+                    if passwordForm['password1'].value() == passwordForm['password2'].value():
+                        user.set_password(passwordForm['password1'].value())
+                        user.save()
+                        return redirect('users:detail')
+
+    passwordForm = ChangePassword()
+    return render(request, 'users/changePassword.html', {'passwordForm': passwordForm})

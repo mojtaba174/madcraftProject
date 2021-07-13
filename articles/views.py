@@ -38,3 +38,4 @@ def ArticleList(request):
     articles = models.Article.objects.all().order_by('-date')
     return render(request, 'articles/list.html', {"articles":articles})
 
+

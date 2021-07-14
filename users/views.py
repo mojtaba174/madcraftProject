@@ -4,6 +4,7 @@ from .forms import RegisterForm, ChangeEmail, ChangePassword
 from django.contrib.auth import login, logout
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.models import User
+from django.contrib.auth.decorators import login_required
 
 
 def signup_view(request):
@@ -18,21 +19,6 @@ def signup_view(request):
     return render(request, "users/sign_up.html", {"form": form})
 
 
-def login_view(request):
-    if request.method == "POST":
-        form = AuthenticationForm(data=request.POST)
-        if form.is_valid():
-            user = form.get_user()
-            login(request, user)
-            if "next" in request.POST:
-                return redirect(request.POST.get("next"))
-            else:
-                return redirect("home")
-
-    form = AuthenticationForm()
-    return render(request, "users/login.html", {"form": form})
-
-
 def logout_view(request):
     if request.method == "POST":
         logout(request)
@@ -41,28 +27,33 @@ def logout_view(request):
         return redirect('home')
 
 
+@login_required(login_url='/users/login/')
 def dashboard_view(request):
     return render(request, 'users/dashboard.html')
 
 
+@login_required(login_url='/users/login/')
 def UserDetail(request):
 
     user = request.user
     return render(request, "users/userDetail.html", {'user': user})
 
 
+@login_required(login_url='/users/login/')
 def ChangeEmail_view(request):
     user = User.objects.get(username=request.user.username)
     if request.method == "POST":
         changeEmailForm = ChangeEmail(request.POST)
         if changeEmailForm.is_valid():
-            user.email = (changeEmailForm['email'].value())
-            user.save()
-            return redirect('users:detail')
-    changeEmailForm= ChangeEmail()
+            if user.email != changeEmailForm['email'].value():
+                user.email = changeEmailForm['email'].value()
+                user.save()
+                return redirect('users:detail')
+    changeEmailForm = ChangeEmail()
     return render(request, 'users/changeEmail.html', {'changeEmailForm':changeEmailForm})
 
 
+@login_required(login_url="/users/login/")
 def ChangePassword_view(request):
     user = User.objects.get(username=request.user.username)
     if request.method == "POST":
@@ -77,3 +68,18 @@ def ChangePassword_view(request):
 
     passwordForm = ChangePassword()
     return render(request, 'users/changePassword.html', {'passwordForm': passwordForm})
+
+
+def login_view(request):
+    if request.method == "POST":
+        form = AuthenticationForm(data=request.POST)
+        if form.is_valid():
+            user = form.get_user()
+            login(request, user)
+            if "next" in request.POST:
+                return redirect(request.POST.get("next"))
+            else:
+                return redirect("home")
+    else:
+        form = AuthenticationForm()
+    return render(request, "users/login.html", {"form": form})

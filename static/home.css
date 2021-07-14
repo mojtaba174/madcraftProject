@@ -9,13 +9,7 @@ h1{
     position: relative;
     text-align: right;
 }
-#home-background{
-    width: 100%;
-    height: -webkit-fill-available;
-    background: #348F50;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #348F50, #56B4D3);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #348F50, #56B4D3);
-}
+
 #back{
     position: absolute;
     left: 50%;
@@ -32,4 +26,14 @@ h1{
     width: 100px;
     height: 500px;
     color: red;
+}
+
+body{
+    background-attachment: fixed;
+    height: 100%;
+    padding-top: 47px;
+    width: 100%;
+    background: #348F50;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #348F50, #56B4D3);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #348F50, #56B4D3);
 }

@@ -2,6 +2,29 @@ h1{
     color: red;
 }
 #first-image{
-    width: 628px;
+    width: 53%  ;
 
+}
+#parent-img{
+    position: relative;
+    text-align: right;
+}
+#home-background{
+    width: 100%;
+    height: 100%;
+    background: #348F50;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #348F50, #56B4D3);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #348F50, #56B4D3);
+}
+#back{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    text-align: center;
+    width: 500px;
+    height:93%;
+    margin:0;
+    border-radius:20px;
+    box-shadow: 1px 5px 15px grey;
 }

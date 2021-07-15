@@ -27,7 +27,23 @@ h1{
     height: 500px;
     color: red;
 }
+.position-in-back{
+    position: absolute;
+}
+.bio{
+    width: 100px;
+    height: 100px;
+    background-color: #56B4D3;
+}
+#header{
 
+}
+#bio-sit-box{
+    right: 100px;
+}
+#bio-python-box{
+    left: 100px;
+}
 body{
     background-attachment: fixed;
     height: 100%;

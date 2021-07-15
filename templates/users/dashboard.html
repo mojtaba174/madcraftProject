@@ -1,3 +1,4 @@
+{% load  static %}
 <!doctype html>
 <html lang="en">
 <head>
@@ -11,5 +12,6 @@
     <div><a href="{% url 'home' %}">Home</a></div>
     <div><a href="{% url 'users:detail' %}">my details</a></div>
     <div><a href="{% url 'articles:create' %}">Writing article</a></div>
+    <script src="{% static 'dashboard.js' %}"></script>
 </body>
 </html>

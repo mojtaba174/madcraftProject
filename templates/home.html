@@ -10,8 +10,7 @@
 
 
 {% block body %}
-    <div id="background">
-    </div>
+
     <div id="back-parent">
         <div id="back">
             <header>
@@ -28,6 +27,25 @@
                     </div>
                 </div>
             </header>
+
+
+        <div id="content">
+
+            {% for article in articles %}
+
+                {% if article.show %}
+                    <div class="articlesBox">
+                    <a href="/articles/{{ article.slug }}"><img src="/media/{{ article.thumbnail }}" alt="image" class="articlesImage"></a>
+                    <h3 class="articlesTitle"><a href="/articles/{{ article.slug }}">{{ article.title }}</a></h3>
+                    <p class="articlesDate">{{ article.date }}</p>
+                    <p class="articlesDescription">{{ article.description }}</p>
+                    <a href="#" class="articlesAuthor">Writing by : {{ article.author }}</a>
+                    </div>
+                {% endif %}
+
+            {% endfor %}
+
+    </div>
 
 
         </div>

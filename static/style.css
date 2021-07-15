@@ -142,17 +142,8 @@ ul.horizontal li a.active{
 .form_logandsing button:hover::before {
   opacity: 1;
 }
-
-
-@font-face {
-   font-family: myFirstFont;
-   src: url(Rubik-SemiBold.ttf);
-}
-*{
-    font-family: myFirstFont, serif;
-}
 .helptext{
-    font-size: 0px;
+    font-size: 0;
     list-style-type: none;
 }
 .form_logandsing #button{
@@ -162,5 +153,12 @@ ul.horizontal li a.active{
 .form_logandsing #button_login{
     top: 25px;
     left: 25%;
+}
+@font-face {
+  font-family: myFirstFont;
+  src: url(Rubik-SemiBold.ttf);
+}
+*{
+    font-family: myFirstFont, serif;
 }
 

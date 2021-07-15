@@ -16,33 +16,51 @@ h1{
     transform: translateX(-50%);
     background-color: white;
     text-align: center;
-    width: 900px;
+    width: 90%;
     height:93%;
-    margin:0;
+    margin:20px 0;
     border-radius:20px;
     box-shadow: 1px 5px 15px grey;
+    max-width: 1000px;
+
+}
+#header{
+    display: flex;
+    flex-wrap: wrap;
 }
 #imag1{
     width: 100px;
     height: 500px;
     color: red;
 }
-.position-in-back{
-    position: absolute;
-}
+
 .bio{
-    width: 100px;
-    height: 100px;
-    background-color: #56B4D3;
+    width: calc(50% - 50px);
+    border-radius: 3px;
+    margin: 20px 20px;
+    padding: 10px;
+    height: 360px;
+    background-color: #56d3cd;
+    text-align: justify;
+    text-justify: inter-word;
+}
+@media (max-width: 800px){
+    .bio{
+        width: calc(100% - 50px);
+        height: 300px;
+    }
+
 }
 #header{
 
 }
 #bio-sit-box{
     right: 100px;
+    margin-left: 10px;
 }
 #bio-python-box{
     left: 100px;
+    margin-right: 10px;
 }
 body{
     background-attachment: fixed;

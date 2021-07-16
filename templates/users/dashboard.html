@@ -88,7 +88,7 @@
           <svg>
             <use xlink:href="#collapse"></use>
           </svg>
-          <form action="{% url 'users:logout' %}" method="post" id="logout_button">
+          <form action="{% url 'users:logout' %}" method="post" id="logout_button_dashboard">
           <button type="submit">Logout</button>
           {% csrf_token %}
           </form>

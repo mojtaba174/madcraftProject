@@ -116,3 +116,53 @@ body{
         width: calc(100% - 20px);
     }
 }
+.articlesBox{
+    width: calc(33% - 20px);
+    height: auto;
+    margin: 0 10px;
+    overflow: hidden;
+    box-shadow: 2px 3px 10px #808080;
+    padding-bottom: 10px;
+}
+
+.articlesImage{
+    width: 100%;
+}
+.articlesDate{
+    padding-left: 5px;
+    margin: 5px 0 10px 10px;
+    font-size: 10px;
+    opacity: 60%;
+}
+.articlesTitle{
+    padding: 5px 0 0 5px;
+    margin: 10px 0 0 10px;
+}
+.articlesAuthor{
+    font-size: 12px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+.articlesDescription{
+    padding-left: 10px;
+
+}
+#content{
+    display: flex;
+    flex-wrap: wrap;
+}
+@media (max-width: 800px){
+    .bio{
+        width: calc(100% - 50px);
+        height: auto;
+    }
+    .articlesBox{
+        width: calc(50% - 20px);
+    }
+
+}
+@media (max-width: 500px){
+    .articlesBox{
+        width: calc(100% - 20px);
+    }
+}

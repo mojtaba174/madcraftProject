@@ -318,27 +318,6 @@ body {
     grid-gap: 10px;
   }
 
-  .search-and-user {
-    position: absolute;
-    left: 131px;
-    top: 10px;
-    padding: 0;
-    grid-column-gap: 5px;
-    width: calc(100% - 141px);
-    border-radius: var(--border-radius);
-    background: transparent;
-  }
-
-  .search-and-user [type="search"] {
-    font-size: 1rem;
-    height: 35px;
-  }
-
-  .search-and-user form svg {
-    width: 18px;
-    height: 18px;
-  }
-
   .search-and-user .admin-profile svg {
     fill: var(--white);
   }
